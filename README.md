@@ -1,10 +1,10 @@
-🚀 # API de Gerenciamento de Usuários com RBAC
+# API de Gerenciamento de Usuários com RBAC
 
 Uma API RESTful completa construída com Node.js e Express para gerenciar usuários e suas permissões através de um sistema de Controle de Acesso Baseado em Função (RBAC).
 
 O projeto foi desenvolvido como um estudo aprofundado sobre arquitetura de software, segurança e integração de diferentes tecnologias de banco de dados.
 
-✨ ## Principais Features
+## Principais Features
 - CRUD Completo: Operações de Criar, Ler, Atualizar e Deletar usuários.
 - Autenticação Segura: Implementação de JSON Web Tokens (JWT) para proteger as rotas.
 - Refresh Tokens: Sistema para renovar tokens de acesso sem exigir novas credenciais.
