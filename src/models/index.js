@@ -1,14 +1,11 @@
-const { Sequelize, DataTypes } = require('sequelize')
-const sequelize = new Sequelize(process.env.MYSQL_URL)
+const { sequelize, DataTypes } = require("../config/SqlDB")
+
+const User = require("./User")(sequelize, DataTypes)
+const Role = require("./Role")(sequelize, DataTypes)
 
 const db = {}
 db.sequelize = sequelize
-
-db.Role = require('./Role')(sequelize, DataTypes)
-db.User = require('./User')(sequelize, DataTypes)
-
-Object.keys(db).forEach(modelName => {
-    if (db[modelName].associate) db[modelName].associate(db)
-})
+db.User = User
+db.Role = Role
 
 module.exports = db

@@ -1,10 +1,9 @@
-const mongoose = require('mongoose')
+const mongoose = require("../config/MongoDB")
 
 const loginLogSchema = new mongoose.Schema({
-    userId: { type: String, required: true },
-    ipAddress: { type: String },
-    userAgent: { type: String },
-    timestamp: { type: Date, default: Date.now }
+  userId: String,
+  ip: String,
+  timestamp: { type: Date, default: Date.now }
 })
 
-module.exports = mongoose.model('LoginLog', loginLogSchema)
+module.exports = mongoose.model("LoginLog", loginLogSchema)
