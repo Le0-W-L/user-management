@@ -7,7 +7,7 @@ const db = require("./models")
 require("./config/MongoDB")
 
 //syncing SQL database
-db.sequelize.sync({ alter: true })
+db.sequelize.sync({ alter: false })
   .then(() => console.log("Sequelize sincronizado com MySQL"))
   .catch(err => console.error("Erro ao sincronizar Sequelize:", err))
 
